@@ -21,6 +21,16 @@ int eucledeanAlgo(int num1, int num2) {
         eucledeanAlgo(num2, num1 % num2);
 }
 
+int eucledeanAlgoUsingLoop(int num1, int num2) {
+    while (num2 != 0) {
+        int temp = num2;
+        num2 = num1 % num2;
+        num1 = temp;
+    }
+
+    return num1;
+}
+
 int main() {
     int num1, num2;
     cout << "Enter the first number: ";
@@ -33,6 +43,9 @@ int main() {
 
     int gcd2 = eucledeanAlgo(num1, num2);
     cout << "GCD using Eucledean's Algorithm: " << gcd2 << endl;
+
+    int gcd3 = eucledeanAlgoUsingLoop(num1, num2);
+    cout << "GCD using Eucledean's Algorithm using loop: " << gcd3 << endl;
 
     return 0;
 }
