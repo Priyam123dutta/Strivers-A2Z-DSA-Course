@@ -22,7 +22,6 @@ int nDigits(int num) {
     return count;
 }
 
-
 //function for checking Armstrong Number
 bool checkArmstrong(int num) {
     int armsNum = 0, temp = num, digits = nDigits(num);
